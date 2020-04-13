@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RENFAConverter</class>
+ <widget class="QMainWindow" name="RENFAConverter">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>720</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>720</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>720</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #333333;</string>
+  </property>
+  <widget class="QWidget" name="centwjet">
+   <widget class="QPushButton" name="parsebtn">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>440</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #555555;
+color: #dddddd;
+border: 0px;
+border-radius: 5px;</string>
+    </property>
+    <property name="text">
+     <string>PARSE</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="titlebar" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>720</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(16,192,128);</string>
+    </property>
+    <widget class="QLabel" name="desctext">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>10</y>
+       <width>450</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>This application enables you to parse your string through a non-deterministic finite automata while printing all passing through stages in the verbose.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ttletext">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>160</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #000000;</string>
+     </property>
+     <property name="text">
+      <string>NFA-String Parser</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="inptsect" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>345</width>
+      <height>370</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #555555;
+border: 0px;
+border-radius: 5px;
+color: #ffffff;</string>
+    </property>
+    <widget class="QTextEdit" name="nfatinpt">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>325</width>
+       <height>270</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto Mono</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #333333;
+border: 0px;
+border-radius: 5px;
+color: #ffffff;</string>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="textInteractionFlags">
+      <set>Qt::TextEditorInteraction</set>
+     </property>
+     <property name="placeholderText">
+      <string>Enter the NFA here in the format specified in the HELP screen</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="headinpt">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>325</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(16,192,128);</string>
+     </property>
+     <property name="text">
+      <string>Input</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="testinpt">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>330</y>
+       <width>325</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto Mono</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #333333;
+color: #dddddd;
+border: 0px;
+border-radius: 5px;</string>
+     </property>
+     <property name="placeholderText">
+      <string>Enter the testing string here</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="otptsect" native="true">
+    <property name="geometry">
+     <rect>
+      <x>365</x>
+      <y>60</y>
+      <width>345</width>
+      <height>410</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #555555;
+border: 0px;
+border-radius: 5px;
+color: #ffffff;</string>
+    </property>
+    <widget class="QTextEdit" name="otptbody">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>325</width>
+       <height>350</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto Mono</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #333333;
+border: 0px;
+border-radius: 5px;
+color: #ffffff;</string>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="textInteractionFlags">
+      <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+     </property>
+     <property name="placeholderText">
+      <string>Output for parsing of the given string through an NFA would be printed here</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="headotpt">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>325</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(16,192,128);</string>
+     </property>
+     <property name="text">
+      <string>Output</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="helpebtn">
+    <property name="geometry">
+     <rect>
+      <x>265</x>
+      <y>440</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #555555;
+color: #dddddd;
+border: 0px;
+border-radius: 5px;</string>
+    </property>
+    <property name="text">
+     <string>HELP</string>
+    </property>
+   </widget>
+   <zorder>titlebar</zorder>
+   <zorder>parsebtn</zorder>
+   <zorder>inptsect</zorder>
+   <zorder>otptsect</zorder>
+   <zorder>helpebtn</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
